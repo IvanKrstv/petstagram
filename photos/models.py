@@ -9,6 +9,7 @@ class Photo(models.Model):
     MAX_FILE_SIZE: int = 5
 
     photo = models.ImageField(
+        upload_to='media',
         validators=[
             FileSizeValidator(MAX_FILE_SIZE)
         ]
